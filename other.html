@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектна задача по информатика</title>
+    <link rel="icon" type="x-icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://r1.ilikewallpaper.net/ipad-wallpapers/download/95123/dark-abstract-black-minimal-4k-ipad-wallpaper-ilikewallpaper_com_2732x2732.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: rgba(240, 240, 240, 0.25);
+            color: #333;
+            backdrop-filter: none;
+            
+        }
+        nav {
+            background-color: black;
+            overflow: hidden;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 0.5rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+    
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+        }
+        nav ul li a.icon {
+            display: inline-block;
+        }
+        .icon {
+    display: inline-block;
+    width: 40px; 
+    height: 50px; 
+    background-color: transparent; 
+    border: 2px solid #333; 
+    transition: transform 0.3s;
+    overflow: hidden; 
+    text-decoration: none;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.icon:hover {
+    transform: scale(1.05); 
+    border-color: #333; 
+}
+
+.icon:active {
+    transform: scale(0.98); 
+}
+.icon:focus {
+    outline: none;
+}
+footer {
+            background-color: #555;
+            color: white;
+            padding: 0.2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+           footer h3{
+      text-align: center;
+      color:white;
+    }
+        .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.image-item {
+    text-align: center; 
+    position: relative;
+    background-color:black; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-item:hover{
+    background-color: white;
+    color:black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.image-item img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+
+.image-text {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    background-color: black; 
+    padding: 5px; 
+    border-radius: 5px;
+}
+.image-text:active{
+    transform: scale(0.95);
+}
+.image-item:active{
+    transform: scale(0.97);
+}
+.image-text:hover{
+    transform: scale(1.1);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        #contact {
+    margin-top: 250px;
+    font-weight: bold;
+            color: #ffffff;
+}
+        #contact {
+    margin-top: 250px;
+    font-weight: bold;
+            color: #ffffff;
+}
+#contact p
+{
+    font-size: 1rem;
+    color: white;
+    padding-left: 15px;
+}
+#contact h2{
+    padding-left: 15px;
+}
+#peripheral, #network, #cooling, #case, #other{
+    margin-bottom: 150px;
+    padding-left: 15px;
+}
+h2{
+    font-size: 2rem;
+    color: white;
+    padding-left: 150px;
+}
+p{
+    line-height: 1.8;
+    font-size: 1rem;
+    color: white;
+    text-align: justify;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+@media (max-width: 1200px) {
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .image-container {
+            gap: 20px;
+        }
+
+        .image-item {
+            width: 80%;
+        }
+
+        .image-text {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .image-container {
+            gap: 20px;
+        }
+
+        .image-item {
+            width: 90%;
+        }
+
+        .image-text {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        #contact {
+            margin-top: 150px;
+        }
+
+        #contact p {
+            font-size: 1rem;
+        }
+
+        #contact h2 {
+            padding-left: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .image-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-item {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        #contact {
+            margin-top: 100px;
+        }
+
+        #contact p {
+            font-size: 0.9rem;
+        }
+    }
+    .social-icons {
+            display: flex;
+            gap: 10px;
+            padding: 20px; 
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .social-icons img:hover {
+            filter: grayscale(0%);
+        }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Дома</a></li>
+            <li><a href="hardware.html">Хардвер</a></li>
+            <li><a href="#contact">Контакт</a></li>
+            <li>
+                <a href="https://dobridaskalov.edu.mk" class="icon" target="_blank" rel="noopener noreferrer">
+                  <img src="https://dobridaskalov.edu.mk/wp-content/uploads/2023/11/logo.png" alt="Icon" />
+                </a>
+              </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="peripheral">
+            <h2>Периферни компоненти</h2>
+            <p><b>Периферните компоненти</b> се додатоци кои го подобруваат искуство со користењето и ја прошируваат функционалноста на компјутерот. Ова вклучува <b>хард дискови, USB флеш мемории, графички таблети, контролери, VR уреди и звучни картички</b>. Графичките таблети се користат од уметници за дигитално цртање, додека гејмерите често користат <b>џојстици и контролери</b>. Хард дискови и SSD уредите обезбедуваат дополнителен простор за складирање, а модерните <b>Thunderbolt и USB 3.2 флеш мемории</b> нудат брзи трансфери на податоци. Други корисни периферни уреди се <b>докинг станици</b>, кои дозволуваат поврзување на повеќе уреди истовремено. </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/External_storage" target="_blank">
+                    <img src="https://www.securedatarecovery.com/Media/blog/2023/external-hard-drive.webp" alt="Image 1">
+                    <p class="image-text">External Hard Drive</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://www.anhoch.com/categories/tableti-za-crtanje/products" target="_blank">
+                    <img src="https://images.javatpoint.com/computer/images/what-is-a-graphics-tablet.jpg" alt="Image 2">
+                    <p class="image-text">Графички таблет</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://www.anhoch.com/categories/gaming-kontroleri" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqVLbvE5QPYR-zr6bSbbZm_XKhyWKAmmSEJw&s" alt="Image 3">
+                    <p class="image-text">Контролер</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="network">
+            <h2>Мрежни компоненти</h2>
+            <p><b>Мрежните компоненти</b> се одговорни за поврзување на компјутерите со интернет или локалните мрежи. Основните мрежни уреди вклучуваат <b>рутери, модеми, мрежни картички, свичеви и access points</b>. Модемот е уред кој ја поврзува домашната мрежа со интернетот, додека рутерот управува со дистрибуцијата на конекцијата кон повеќе уреди. Постојат <b>жични (Ethernet) и безжични (Wi-Fi) конекции</b>, каде што Wi-Fi 6 и Wi-Fi 6E обезбедуваат поголема брзина и стабилност. Гејмерите и професионалците често користат <b>Gigabit Ethernet или дури 10GbE конекции</b> за минимално доцнење. Свичевите се користат за проширување на жичните мрежи, а <b>Powerline адаптерите</b> дозволуваат користење на електричната мрежа за интернет сигнал.</p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%95%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpVCiAclS4gkRwOkU1ZDitBZig6nSmkfuxWA&s" alt="Image 1">
+                    <p class="image-text">Ethernet Netowrk Card</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%9D%D0%B0%D1%81%D0%BE%D1%87%D1%83%D0%B2%D0%B0%D1%87" target="_blank">
+                    <img src="https://www.lifewire.com/thmb/6MyHXATC81C0nxzHIjB-XqBnxrg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/netgear-router-gaming-5b2c15f6ff1b780037823ccd.jpg" alt="Image 2">
+                    <p class="image-text">Рутер</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BC" target="_blank">
+                    <img src="https://cdn.thewirecutter.com/wp-content/media/2024/03/cable-modem-2048px-7360-3x2-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200" alt="Image 3">
+                    <p class="image-text">Модеми</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cooling">
+            <h2>Системи за ладење</h2>
+            <p><b>Ладењето</b> е клучно за одржување на температурата на компонентите во компјутерот и спречување на прегревање. Системите за ладење вклучуваат <b>воздушно ладење, водено ладење и пасивно ладење</b>. <b>Воздушните ладилници</b> користат <b>кулери (вентилатори) и алуминиумски/бакарни радијатори</b>, додека <b>воденото ладење (AIO и custom loops)</b> користи течност за подобро дисперзирање на топлината. Високо-ефикасните <b>Noctua, be quiet! и Corsair</b> ладилници се популарни кај корисниците. За графичките картички и процесорите, постојат <b>термални пасти и термални подлоги</b>, кои овозможуваат подобар контакт помеѓу чипот и ладилникот. Некои системи користат <b>течно азотно ладење (LN2)</b> за зголемувањето на перформансите во процес наречен overclocking. Добрата <b>вентилација на куќиштето</b> е исто така клучна, каде што повеќе вентилатори со <b>PWM контрола</b> помагаат во регулирање на температурата и нивото на бучава.  </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Passive_cooling" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAuH8mkmLzcY-BQ5gjOV4lCcMDhu0RYKnVKA&s" alt="Image 1">
+                    <p class="image-text">Пасивен cooler за процесор</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Computer_cooling#Air_cooling" target="_blank">
+                    <img src="https://thermaltake-de-bhgycxg9djfgcmfn.a02.azurefd.net/media/catalog/product/cache/023a745bb14092c479b288481f91a1bd/c/l/cl-p117-ca14bl-a_01.jpg" alt="Image 2">
+                    <p class="image-text">Воздушен Cooler за CPU</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Computer_cooling#Liquid_cooling" target="_blank">
+                    <img src="https://b2c-contenthub.com/wp-content/uploads/2022/10/aio-ssd-cooler.jpg?quality=50&strip=all&w=1200" alt="Image 3">
+                    <p class="image-text">AIO Cooler(водено ладење)</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="case">
+            <h2>Куќиште</h2>
+            <p><b>Куќиштето</b> ги содржи сите компоненти на компјутерот и влијае врз <b>вентилацијата, изгледот и можноста за проширување</b>. Постојат повеќе типови, како <b>Full Tower, Mid Tower, Mini-ITX и Small Form Factor (SFF)</b>. Големите куќишта нудат повеќе простор за надградба, додека малите модели се компатибилни со компактни системи. Современите куќишта имаат <b>стакло за RGB осветлување, добро организирани кабелски канали и поддршка за водено ладење</b>. Популарни брендови како <b>Lian Li, Fractal Design, NZXT и Corsair</b> нудат модели со <b>USB-C, ARGB контрола и модуларни компоненти</b>. Некои модели имаат <b>филтри за прашина</b>, кои помагаат во одржување на внатрешноста да биде чиста. Добрата циркулација на воздухот со повеќе вентилатори е важна за оптимално ладење.  
+            </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Computer_case" target="_blank">
+                    <img src="https://cdn.sanity.io/images/mqc7p4g4/production/57bbf7509449204047fda61858ca843b92ac33b5-1250x1250.jpg" alt="Image 1">
+                    <p class="image-text">Куќиште</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://www.newegg.com/p/pl?N=100007583+600546036&srsltid=AfmBOoquRKG0coMeUP3RwcrfPLWMc-iNi550PcHhLlE-EeXSBmwRWdM5" target="_blank">
+                    <img src="https://c1.neweggimages.com/productimage/nb640/AY3SS2401310ON787D2.jpg" alt="Image 2">
+                    <p class="image-text">Micro ATX Куќиште</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://www.corsair.com/us/en/c/pc-cases/full-tower?srsltid=AfmBOopK8iRqsgNDd59qeCD2lObavPKbP2cUldRZLz7oprZLF3CyP4AQ" target="_blank">
+                    <img src="https://www.caseking.de/on/demandware.static/-/Sites-master-catalog-caseking/default/dw7c69492c/images/pim/GEPH/GEPH-165/GEPH-165_8aa61fc817c607d922b2d7e1d93766819f6ff54c.jpg" alt="Image 3">
+                    <p class="image-text">Full Tower Куќиште</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="other">
+            <h2>Останати</h2>
+            <p>Покрај главните компоненти, компјутерот може да има различни додатоци како <b>USB драјвови, мемориски картички, адаптери и проширливи PCIe картици</b>. <b>USB флеш мемориите (USB 3.2, USB 4)</b> овозможуваат брзо пренесување на податоци, додека <b>SD и microSD картичките</b> се користат за камери, мобилни уреди и лаптопи. За подобрување на компјутерот, корисниците можат да додадат <b>додатни PCIe картички за Wi-Fi, Bluetooth, capture cards за снимање видео и RAID контролери</b> за управување со повеќе дискови. Адаптерите како <b>USB-to-HDMI, USB-C hubs и Thunderbolt docks</b> помагаат за полесно поврзување со повеќе уреди.</p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/USB_flash_drive" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkI42YyjC3UK-NqQf28o9QPEyvNfBSwT0_ug&s" alt="Image 1">
+                    <p class="image-text">USB Flash Drive</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D1%81%D0%BA%D0%B0_%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D1%87%D0%BA%D0%B0" target="_blank">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/memory-card/microsd-card/e/6/q/8gb-micro-sd-card-high-speed-memory-card-class-10-for-original-imaggp79swhgpguy.jpeg?q=20&crop=false" alt="Image 2">
+                    <p class="image-text">Мемориска картичка</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/PCI_Express" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/61tfYJV1teL._AC_UF894,1000_QL80_.jpg" alt="Image 3">
+                    <p class="image-text">PCIe Extender</p></a>
+                </div>
+            </div>
+        </section>
+
+       <section id="contact">
+            <h2>Контакт</h2>
+            <p>Павле Ристов IV-3</p>
+            <P>pavleristov3@gmail.com</P>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gimnazijadobridaskalov" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/gimnazijadobridaskalov" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <h3> Проектна задача по информатика 2025 </h3>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектна задача по информатика</title>
+    <link rel="icon" type="x-icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://r1.ilikewallpaper.net/ipad-wallpapers/download/95123/dark-abstract-black-minimal-4k-ipad-wallpaper-ilikewallpaper_com_2732x2732.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: rgba(240, 240, 240, 0.25);
+            color: #333;
+            backdrop-filter: none;
+            
+        }
+        nav {
+            background-color: black;
+            overflow: hidden;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 0.5rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+    
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+        }
+        nav ul li a.icon {
+            display: inline-block;
+        }
+        .icon {
+    display: inline-block;
+    width: 40px; 
+    height: 50px; 
+    background-color: transparent; 
+    border: 2px solid #333; 
+    transition: transform 0.3s;
+    overflow: hidden; 
+    text-decoration: none;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.icon:hover {
+    transform: scale(1.05); 
+    border-color: #333; 
+}
+
+.icon:active {
+    transform: scale(0.98); 
+}
+.icon:focus {
+    outline: none;
+}
+footer {
+            background-color: #555;
+            color: white;
+            padding: 0.2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    footer h3{
+      text-align: center;
+      color:white;
+    }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.image-item {
+    text-align: center; 
+    position: relative;
+    background-color:black; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-item:hover{
+    background-color: white;
+    color:black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.image-item img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+
+.image-text {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    background-color: black; 
+    padding: 5px; 
+    border-radius: 5px;
+}
+.image-text:active{
+    transform: scale(0.95);
+}
+.image-item:active{
+    transform: scale(0.97);
+}
+.image-text:hover{
+    transform: scale(1.1);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        #contact {
+    margin-top: 250px;
+    font-weight: bold;
+            color: #ffffff;
+}
+#contact p
+{
+    font-size: 1rem;
+    color: white;
+    padding-left: 15px;
+}
+#contact h2{
+    padding-left: 15px;
+}
+#procesor, #ram, #motherboard, #storage, #psu, #gpu{
+    margin-bottom: 150px;
+    padding-left: 15px;
+}
+h2{
+    font-size: 2rem;
+    color: white;
+    padding-left: 150px;
+}
+p{
+    line-height: 1.8;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    padding: 0 150px;
+    text-align: justify;
+}
+    
+.social-icons {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .social-icons img:hover {
+            filter: grayscale(0%);
+        }
+    @media (max-width: 768px) {
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+.social-icons {
+    gap: 5px;
+    padding: 10px;
+}
+.social-icons a {
+    width: 30px;
+    height: 30px;
+
+}
+     .image-container {
+            gap: 20px;
+        }
+
+        .image-item {
+            width: 90%;
+        }
+
+        .image-text {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        #contact {
+            margin-top: 100px;
+        }
+
+        #contact p {
+            font-size: 1rem;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+        .image-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-item {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        #contact {
+            margin-top: 100px;
+        }
+
+        #contact p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="file.html">Дома</a></li>
+            <li><a href="hardware.html">Хардвер</a></li>
+            <li><a href="#contact">Контакт</a></li>
+            <li>
+                <a href="https://dobridaskalov.edu.mk" class="icon" target="_blank" rel="noopener noreferrer">
+                  <img src="https://dobridaskalov.edu.mk/wp-content/uploads/2023/11/logo.png" alt="Icon" />
+                </a>
+              </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="procesor">
+            <h2>Процесор</h2>
+            <p> <b>CPU</b> претставува мозокот на секој компјутер, овозможувајќи координирано работење на сите делови во компјутерот. CPU-то е одговорно за правење пресметки, инструкции и слично. Најраните електронски компјутери како <b>ENIAC(1945)</b> и <b>UNIVAC(1951)</b> користеле вакумски цевки, а со појавата на транзисторот во 1947 година дошло до револуционирање на компјутерската технологија што овозможило да се прават помали и поефикасни процесори, а со тоа и помали компјутери како <b>IBM 1401(1959)</b>. Следното големо револуционирање дошло со појавата на <b>интегрираните кола(ICs)</b> во 1960-тите, што довело до <b>Intel 4004(првиот микропроцесор)</b>, што довело до <b>х86 архитектурата</b> која се користи во персоналните компјутери. Во 1990-тите и 2000-тите, процесорите доживеале значајни подобрувања, вклучувајќи ги <b>Intel Pentium (1993)</b>, <b>AMD Athlon 64 (2003) (првиот 64-битен процесор)</b> и преминот кон процеси со повеќе или мулти-јадрена архитектура. Идните иновации вклучуваат графни и јаглеродни нанотранзистори, квантни и оптички компјутери и оптимизации базирани на вештачка интелигенција. Главните производители денес се Intel (Core, Xeon), AMD (Ryzen, Threadripper, EPYC), Apple (M1, M2, M3) и Qualcomm & MediaTek во мобилната индустрија. 
+             Од компјутери со вакумски цевки со големина на соба до денешните компактни, интелигентни чипови, процесорите доживеале огромна трансформација.</p>
+             <div class="image-container">
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83%D0%B2%D0%B0%D1%87" target="_blank">
+                    <img src="https://i.extremetech.com/imagery/content-types/039yQkr12P4wt2gAGnxWdpl/hero-image.fill.size_1200x675.jpg" alt="Image 1">
+                    <p class="image-text">Intel 4004(Првиот микропроцесор)</p></a>
+                </a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%A1%D0%BC%D0%B5%D1%82%D0%B0%D1%87%D0%BA%D0%B0_%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0" target="_blank">
+                    <img src="https://miro.medium.com/v2/resize:fit:1024/1*9QaFF2tXy2AvmwkXFeZabg.png" alt="Image 2">
+                    <p class="image-text">Архитектура на процесор</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D0%BD%D0%B0_%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83%D0%B2%D0%B0%D1%87%D0%BA%D0%B0_%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%86%D0%B0" target="_blank">
+                    <img src="https://images.anandtech.com/doci/6985/DT_Haswell_i7_FB_678x452.jpg" alt="Image 3">
+                    <p class="image-text">Надворешен изглед на процесор</p></a>
+                </div>
+            </div>
+            
+            </section>
+
+        <section id="ram">
+            <h2>Меморија (RAM)</h2>
+            <p> <b>Компјутерската меморија (RAM)</b> е клучен компонент во секој компјутерски уред, бидејќи привремено складира податоци што ги обработува процесорот. Таа овозможува брз пристап до податоци, обезбедувајќи непречено работење. Од бавни механички складишта до денешните мемориски модули, компјутерската меморија значително придонела за напредокот на компјутерската технологија. Раните форми на меморија вклучуваа <b>ударни картички</b> и <b>магнетни тапани</b>, но вистинскиот напредок дошол со <b>полупроводничката меморија (1960-ти)</b> и <b>DRAM (1968)</b>, која стана стандард поради високата брзина и ефикасност. RAM се дели на <b>статичка (SRAM)</b> и <b>динамичка (DRAM) меморија</b>. <b>SRAM</b> е побрза и не бара постојано освежување, што ја прави идеална за кеш меморија, додека <b>DRAM</b> е поевтина и погуста, но мора редовно да се освежува, па затоа е главна во системската меморија. Во текот на времето, DRAM еволуираше со <b>SDRAM (1990-ти)</b>, кој синхронизираше работа со процесорот, и <b>DDR (Double Data Rate) RAM</b>, кој значително ја зголеми брзината. Денешните компјутери користат <b>DDR4</b> и <b>DDR5</b>, кои нудат поголема пропусност со пониска потрошувачка на енергија. Бидејќи RAM е <b>испарлива меморија</b>, податоците се губат при исклучување, за разлика од HDD и SSD, кои ги чуваат трајно. 
+                Перформансите зависат од <b>фреквенцијата (MHz/GHz)</b> и <b>капацитетот (GB/TB)</b>, а брзината се зголемува со <b>dual-channel</b> и <b>quad-channel</b> меморија, кои овозможуваат паралелна обработка на податоци. Современите подобрувања се фокусираат на ниска потрошувачка и брз одговор, како LPDDR RAM за мобилни уреди и GDDR RAM за графички картички. Новите технологии како <b>HBM (High Bandwidth Memory)</b> носат револуција во обработка на податоци, особено во AI и 3D рендерирање. Иднината на RAM може да вклучува <b>MRAM, PRAM</b> и <b>оптичка меморија</b>, кои ветуваат поголеми брзини и непроменливост на податоците. </p>
+                <div class="image-container">
+                    <div class="image-item">
+                        <a href="https://mk.wikipedia.org/wiki/RAM_%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D1%98%D0%B0#%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%98%D0%B0" target="_blank">
+                        <img src="https://www.cs.odu.edu/~tkennedy/cs300/development/Public/M01-HistoryOfComputerMemory/image1.jpeg" alt="Image 1">
+                        <p class="image-text">Историјата на RAM меморијата</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://mk.wikipedia.org/wiki/RAM_%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D1%98%D0%B0" target="_blank">
+                        <img src="https://t3.ftcdn.net/jpg/01/70/80/58/360_F_170805887_pb2fq0Vs4RkI15NZ7niAh4EkLwa5snUX.jpg" alt="Image 2">
+                        <p class="image-text">RAM меморија со голем капацитет за сервери</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://it.mk/product/ram-ddr4-16gb-2x8gb-3200mhz-g-skill-trident-z-rgb-f4-3200c16d-16gtzr/" target="_blank">
+                        <img src="https://www.gskill.com/_upload/images/1806221040450.png" alt="Image 3">
+                        <p class="image-text">DDR5 меморија која се користи во персоналните компјутери</p></a>
+                    </div>
+                </div>
+                
+            </section>
+
+        <section id="motherboard">
+            <h2>Матична плоча</h2>
+            <p><b>Матичната плоча</b> е основен компонент на секој компјутер, бидејќи ги поврзува и координира сите хардверски делови. Таа овозможува комуникација помеѓу процесорот (CPU), меморијата (RAM), графичката картичка (GPU), уредите за складирање (SSD/HDD) и другите периферни уреди. Со текот на времето, матичните плочи еволвирале, овозможувајќи побрза обработка, подобра поврзаност и зголемена ефикасност. Првите компјутери од средината на 20-тиот век немале матични плочи, туку користеле комплексни поврзувања со помош на жици. Со развојот на <b>микропроцесорите во 1970-тите</b>, се појавиле првите современи плочи со основни конектори. Во 1980-тите, стандардите како <b>AT (Advanced Technology)</b> вовеле подреден распоред и дефинирани димензии. Во 1995 година, <b>ATX стандардот</b> станал најпопуларен, овозможувајќи подобра организација, повеќе слотови за проширување и подобрено ладење. Современите матични плочи поддржуваат различни чипсети, кои управуваат со комуникацијата меѓу компонентите. <b>Intel</b> и <b>AMD</b> се најзастапени во овој дел, при што секоја генерација носи подобрувања во брзината, меморискиот пропусен опсег и енергетската ефикасност. Денес, матичните плочи вклучуваат <b>PCIe слотови</b> за графички и други картички, <b>M.2 конектори</b> за едни од најбрзите SSD дискови, <b>USB-C</b> и <b>Thunderbolt портови</b> за висока брзина на пренос, како и напредни BIOS/UEFI интерфејсови за лесен пристап до прилагодувањата на системот. Постојат различни формати на матични плочи, како <b>ATX</b>, <b>Micro-ATX</b> и <b>Mini-ITX</b>, прилагодени за различни големини и намени на компјутери. Напредните модели поддржуваат <b>оверклокување</b>, подобрени VRM модули за стабилно напојување на процесорот и RGB осветлување за изглед. Во иднината, развојот на матичните плочи се насочува кон поголема интеграција, со <b>безжично поврзување (Wi-Fi 7, Bluetooth 5.3)</b>, подобрени системи за автоматско прилагодување на перформансите и потенцијално модуларен дизајн, кој ќе овозможи лесно надградување на клучните компоненти. </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D0%BF%D0%BB%D0%BE%D1%87%D0%B0" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/IBM_PC_Motherboard_%281981%29.jpg/1200px-IBM_PC_Motherboard_%281981%29.jpg" alt="Image 1">
+                    <p class="image-text">Историја на матичната плоча(1981)</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.eyewated.com/%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B8-%D0%BF%D0%BB%D0%BE%D1%87%D0%B8-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%81%D0%BA%D0%B8-%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%D0%B8-%D0%B8/" target="_blank">
+                    <img src="https://cdn.shopify.com/s/files/1/0329/9865/3996/t/5/assets/why_is_motherboard_called_motherboard-5UrOYC.True?v=1707740295" alt="Image 2">
+                    <p class="image-text">Делови на матичната плоча </p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://www.google.com/search?sca_esv=a6ef7348f5b3eced&sxsrf=AHTn8zp-9JlZLunNwIVLDT8XwYIP55fwzA:1740521165972&q=rgb+motherboard&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBr1qLlHFB6ZBcx-Arq68_wc6NXO-nGlA3Ez9ZCbR-p2qkj4GBH3gRAK9zWefPKg-Fs_gKZO-qV74rsNazCZcCrvVFCYENvUAwz8ri9GUWM4Bkd5QfO6RbRrSVsdxGFeS6tWwCv9OYq8fdL8NuzZRhCCq-Qbx&sa=X&ved=2ahUKEwjdl8nO6t-LAxU8Q_EDHX5KCe4QtKgLegQIDxAB&biw=1366&bih=657&dpr=1" target="_blank">
+                    <img src="https://www.zdnet.com/a/img/resize/44e03660f0e18a6df4a866c26f27026ebcdb5f2e/2024/08/02/c24bdaea-0e2c-4a85-810f-1334a3f2b83c/asus-rog-strix-z790-e.jpg?auto=webp&width=1280" alt="Image 3">
+                    <p class="image-text">Модерна матична плоча</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="storage">
+            <h2>Уред за складирање</h2>
+            <p><b>Уредите за складирање (SSD/HDD/M.2)</b> се едни од најважните делови на секој компјутер, бидејќи трајно ги чува податоците, оперативниот систем и апликациите. Со текот на времето, технологијата на складирање e значително напредната од механички дискови до NVMe SSD, овозможувајќи побрз пристап до информации и подобри перформанси. 
+
+                Најраните форми на складирање вклучуваа перфорирани картички и магнетни ленти, кои биле бавни и со ограничен капацитет. Во 1956 година, <b>IBM го претстави првиот хард диск (HDD)</b>, кој користеше ротирачки плочи и магнетни глави за читање и запишување на податоци. Со годините, <b>HDD</b> стана поевтин и подостапен, достигнувајќи капацитети од <b>10TB</b> и повеќе, но остана ограничен со <b>брзината на вртење (RPM)</b> и механичките делови, што го прави многу полесен за оштетување. 
+                
+                Со цел да се подобрат брзината и издржливоста, во 2000-тите се појавија <b>SSD (Solid State Drive)</b> дисковите, кои користат <b>NAND флеш меморија</b> наместо механички делови. <b>SSD</b> се значително побрзи, потивки и поиздржливи од HDD, но на почетокот беа скапи и со ограничен капацитет. Првите модели користеа <b>SATA конекција</b>, која иако беше подобра од HDD, беше ограничена на <b>550MB/s</b>.
+                
+                 Со развојот на <b>PCIe интерфејсот</b>, се појавија <b>M.2 NVMe SSD</b>, кои овозможуваат брзини поголеми од <b>7,000MB/s</b>, што драстично ги забрзува стартувањето на системот и вчитувањето на апликации. Денес, HDD се уште се користат за складирање на големи количини на податоци (пр. сервери), додека SSD се стандард за персоналните компјутери за оперативни системи и брзи апликации.</p>
+                 <div class="image-container">
+                    <div class="image-item">
+                        <a href="https://mk.wikipedia.org/wiki/%D0%A2%D0%B2%D1%80%D0%B4_%D0%B4%D0%B8%D1%81%D0%BA	" target="_blank">
+                        <img src="https://www.datarecoveryspecialists.co.uk/ckfinder/userfiles/images/datarecoveryhdd.jpg" alt="Image 1">
+                        <p class="image-text">HDD</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://en.wikipedia.org/wiki/Solid-state_drive" target="_blank">
+                        <img src="https://www.power-x.in/cdn/shop/files/2.5_SATA_3.0_SSD_128GB.jpg?v=1730361334&width=3000" alt="Image 2">
+                        <p class="image-text">SSD</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://www.google.com/search?q=nvme+m2&sca_esv=a6ef7348f5b3eced&udm=2&biw=1366&bih=657&sxsrf=AHTn8zozu5Wvk_Cc1glRr8MZHyaZU1pvxQ%3A1740521458502&ei=8j--Z_KrHuuDxc8PlfmnmQQ&oq=nvm&gs_lp=EgNpbWciA252bSoCCAAyBxAjGCcYyQIyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIqxBQAFj6AXAAeACQAQCYAd4BoAHxA6oBBTAuMi4xuAEDyAEA-AEBmAIDoAL8BJgDAJIHBTAuMS4yoAfxEQ&sclient=img" target="_blank">
+                        <img src="https://image-us.samsung.com/SamsungUS/home/computing/memory-and-storage/solid-state-drives/pdp/mz-v7e500bw/gallery-v2/001_gallery_MZ-V7E500BW_09-28-18.jpg?$product-details-jpg$" alt="Image 3">
+                        <p class="image-text">NVMe M.2 SSD</p></a>
+                    </div>
+                </div>
+                
+                </section>
+
+        <section id="psu">
+            <h2>Уред за напојување</h2>
+            <p><b>Напојувањето (PSU - Power Supply Unit)</b> е клучен компонент на секој компјутер, бидејќи ја претвара електричната енергија од струен извор во стабилни напонски вредности што ги користат другите компоненти. Квалитетното напојување обезбедува <b>сигурност, ефикасност и долготрајност</b> на системот, додека слабо или неквалитетно напојување може да предизвика нестабилност, па дури и хардверски оштетувања. Во почетоците на компјутерите, напојувањата биле едноставни и користеле <b>линеарни трансформатори</b> со ограничена моќност. Со развојот на технологијата, </b>AT (Advanced Technology) PSU</b> во 1980-тите воведе стандарден дизајн, но неговата еволуција во <b>ATX (1995)</b> донесе подобрувања како <b>поудобно поврзување, подобро управување со енергијата и зголемена ефикасност</b>. ATX формата останува индустриски стандард до денес, но со многу подобрувања. Современите PSU уреди се оценуваат според <b>моќноста (Watt)</b> и <b>ефикасноста</b>, која најчесто се мери преку <b>80 PLUS стандардите</b> – <b>Bronze, Silver, Gold, Platinum и Titanium</b>, каде Titanium нуди највисока ефикасност (над 90%). Поголемата ефикасност значи помала загуба на енергија што се претвара, што води до подолг век на траење и подобри перформанси.  
+
+               <br> Постојат три главни типови на напојувања:  
+               <br> - <b>Нестандардни (Fixed) PSU</b> – со фиксирани кабли, потешки за организирање.  
+               <br> - <b>Полумодуларни (Semi-modular) PSU</b> – главните кабли се фиксни, но останатите можат да се отстранат.  
+               <br> - <b>Модуларни (Fully-modular) PSU</b> – сите кабли се одвојливи, овозможувајќи подобра организација и проток на воздух.  
+                <br>
+             
+               <br>  Модерните напојувања вклучуваат <b>заштитни механизми</b> како <b>OVP (Overvoltage Protection), OCP (Overcurrent Protection), UVP (Undervoltage Protection) и SCP (Short Circuit Protection)</b> за заштита од електрични оштетувања. <b>ATX 3.0 и PCIe 5.0 стандардите</b> воведуваат подобрена поддршка за нови графички картички со <b>12VHPWR конектор</b>, кој е неопходен за најновите графички картички кои користат огромни количини на енергија.</p>
+               <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Power_supply_unit_(computer)#History" target="_blank">
+                    <img src="https://images.anandtech.com/reviews/psu/2009/pcpower-visit/15.jpg" alt="Image 1">
+                    <p class="image-text">Уред за напојување користен во постари компјутери</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Power_supply_unit_(computer)#Modular_power_supplies" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGHjnvputdPJC497hMMDEwyyuv3QQsnavVw&s" alt="Image 2">
+                    <p class="image-text">Модуларен уред за напојување</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Power_supply_unit_(computer)#Other_form_factors" target="_blank">
+                    <img src="https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/607489_981159_01_front_comping.jpg" alt="Image 3">
+                    <p class="image-text">Нестандарден уред за напојување</p></a>
+                </div>
+            </div>
+            
+            </section>
+
+        <section id="gpu">
+            <h2>Графичка картичка(GPU)</h2>
+            <p><b>Графичката картичка (GPU - Graphics Processing Unit)</b> е една од најважните компоненти на компјутерот, бидејќи е одговорен за рендерирање на графика, обработка на визуелни податоци и се повеќе задачи поврзани со <b>вештачка интелигенција (AI), научни симулации и видео обработка</b>. Од своите почетоци таа била користена за едноставно рендерирање на 2D, графичките картички денес се моќни процесори кои често го надминуваат перформансот на CPU-то во одредени задачи. Првите компјутери немаа посебна графичка картичка туку графиката била обработувана од <b>CPU-то</b> и едноставни <b>видеочипови</b> како во <b>IBM CGA (1981)</b>. Со развојот на персоналните компјутери, во 1990-тите се појавија првите посовремени <b>3D графички процесори</b>, како <b>3dfx Voodoo (1996)</b> и <b>NVIDIA RIVA TNT (1998)</b>, кои овозможија напредно рендерирање на 3D текстури. Позначаен напредок се случил со <b>NVIDIA GeForce 256 (1999)</b>. 
+                Денес, графичката картичка е важен компонент за <b>гејминг, 3D моделирање, видео монтажа и научни истражувања</b>.
+                <br> Постојат два главни типа:  
+                <br>- <b>Интегрирани GPU (iGPU)</b> – вградени во процесорот (како Intel Iris Xe и AMD Radeon Graphics), наменети за основна графика, ниска потрошувачка на енергија и се најчесто користени во лаптопите и телефоните.  
+                <br>- <b>Дискретни GPU (Dedicated GPU)</b> – посебни графички картички со своја меморија (VRAM), како <b>NVIDIA GeForce RTX</b> и <b>AMD Radeon RX</b>, кои нудат повисоки перформанси за гејминг и апликации наменети за 3D моделирање, едитирање и слично.  
+                <br>
+               <br> Модерните графички картички користат <b>GDDR6</b> и <b>GDDR6X VRAM</b>, што овозможува <b>високи брзини на трансферот на податоци</b>, додека </b>PCIe 4.0 и PCIe 5.0 интерфејсите</b> обезбедуваат брза комуникација со останатите компоненти. <b>Ray tracing технологијата</b>, воведена со <b>NVIDIA RTX 2000 серијата</b>, што дава реалистичен приказ на графиката, што значително го унапредува квалитетот во видеоигрите. Освен за гејминг, во последните години графичката картичка има огромна примена во <b>AI и научни истражувања</b>, каде <b>NVIDIA CUDA</b> и <b>AMD ROCm</b> платформите овозможуваат истовремена обработка на големи количини на податоци. <b>AMD RDNA 3</b> и <b>NVIDIA Ada Lovelace</b> се најновите архитектури што продолжуваат да ги унапредуваат брзината и ефикасноста на графичките картички.  
+                </p>
+                <div class="image-container">
+                    <div class="image-item">
+                        <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit#History" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE74i3qq3Q-4JEjNWpdbnvOf2qT5uo_hOl1w&s" alt="Image 1">
+                        <p class="image-text">GeForce 256(Првата графичка картичка</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit#Usage-specific_GPU" target="_blank">
+                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/titan/titan-rtx/nvidia-titan-rtx-shop-2c50-l@2x.png" alt="Image 2">
+                        <p class="image-text">Графичка картичка која се користи за 3D моделирање и рендерирање</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://en.wikipedia.org/wiki/GeForce" target="_blank">
+                        <img src="https://www.fsp-group.com/upload/241209-6756896BD565F.jpg" alt="Image 3">
+                        <p class="image-text">Графичка картичка која е одлична за играње игри и персонална употреба</p></a>
+                    </div>
+                </div>
+                
+            </section>
+
+        <section id="contact">
+            <h2>Контакт</h2>
+            <p>Павле Ристов</p>
+            <p>pavleristov3@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gimnazijadobridaskalov" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/gimnazijadobridaskalov" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <h3> Проектна задача по информатика 2025 </h3>
+        </footer>
+    </main>
+</body>
+</html>

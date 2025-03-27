@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектна задача по информатика</title>
+      <link rel="icon" type="x-icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://r1.ilikewallpaper.net/ipad-wallpapers/download/95123/dark-abstract-black-minimal-4k-ipad-wallpaper-ilikewallpaper_com_2732x2732.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: rgba(240, 240, 240, 0.25);
+            color: #333;
+            backdrop-filter: none;
+            
+        }
+        nav {
+            background-color: black;
+            overflow: hidden;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 0.5rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+    
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+        }
+        nav ul li a.icon {
+            display: inline-block;
+        }
+        .icon {
+    display: inline-block;
+    width: 40px; 
+    height: 50px; 
+    background-color: transparent; 
+    border: 2px solid #333; 
+    transition: transform 0.3s;
+    overflow: hidden; 
+    text-decoration: none;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.icon:hover {
+    transform: scale(1.05); 
+    border-color: #333; 
+}
+
+.icon:active {
+    transform: scale(0.98); 
+}
+.icon:focus {
+    outline: none;
+}
+footer {
+            background-color: #555;
+            color: white;
+            padding: 0.2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        footer h3{
+      text-align: center;
+      color:white;
+    }
+        .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.image-item {
+    text-align: center; 
+    position: relative;
+    background-color:black; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-item:hover{
+    background-color: white;
+    color:black;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.image-item img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+
+.image-text {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    background-color: black; 
+    padding: 5px; 
+    border-radius: 5px;
+}
+.image-text:active{
+    transform: scale(0.95);
+}
+.image-item:active{
+    transform: scale(0.97);
+}
+.image-text:hover{
+    transform: scale(1.1);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        #contact {
+    margin-top: 250px;
+    font-weight: bold;
+            color: #ffffff;
+}
+        #contact {
+    margin-top: 250px;
+    font-weight: bold;
+            color: #ffffff;
+}
+#contact p
+{
+    font-size: 1rem;
+    color: white;
+    padding-left: 15px;
+}
+#contact h2{
+    padding-left: 15px;
+}
+#keyboard, #mouse, #monitor, #speakers, #camera{
+    margin-bottom: 150px;
+    padding-left: 15px;
+}
+h2{
+    font-size: 2rem;
+    color: white;
+    padding-left: 150px;
+}
+p{
+    line-height: 1.8;
+    font-size: 1rem;
+    color: white;
+    text-align: justify;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+@media (max-width: 1200px) {
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .image-container {
+            gap: 20px;
+        }
+
+        .image-item {
+            width: 80%;
+        }
+
+        .image-text {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .image-container {
+            gap: 20px;
+        }
+
+        .image-item {
+            width: 90%;
+        }
+
+        .image-text {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        #contact {
+            margin-top: 150px;
+        }
+
+        #contact p {
+            font-size: 1rem;
+        }
+
+        #contact h2 {
+            padding-left: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .image-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-item {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        #contact {
+            margin-top: 100px;
+        }
+
+        #contact p {
+            font-size: 0.9rem;
+        }
+    }
+    .social-icons {
+            display: flex;
+            gap: 10px;
+            padding: 20px; 
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .social-icons img:hover {
+            filter: grayscale(0%);
+        }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="file.html">Дома</a></li>
+            <li><a href="hardware.html">Хардвер</a></li>
+            <li><a href="#contact">Контакт</a></li>
+            <li>
+                <a href="https://dobridaskalov.edu.mk" class="icon" target="_blank" rel="noopener noreferrer">
+                  <img src="https://dobridaskalov.edu.mk/wp-content/uploads/2023/11/logo.png" alt="Icon" />
+                </a>
+              </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="keyboard">
+            <h2>Тастатура</h2>
+            <p> <b>Тастатурата</b> е еден од најважните влезни уреди кој овозможува внесување текст и команди во компјутерот. Првите механички тастатури потекнуваат од телеграфските машини во 19-тиот век, додека современите тастатури нудат разновидни дизајни и функции. Постојат два главни типа: <b>мембрански и механички</b>. Мембранските тастатури се потивки и подостапни, додека механичките користат различни прекинувачи <b>(switches)</b> кои овозможуваат побрза реакција и подобро чувство при пишување. Постојат <b>жични (USB) и безжични (Bluetooth, RF) модели</b>, а многу модерни тастатури вклучуваат <b>RGB осветлување, макро копчиња и отпорност на вода</b>. Гејмерските тастатури често имаат <b>анти-ghosting и N-key rollover</b>, што им овозможува на играчите да притиснат повеќе копчиња истовремено без грешка. </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%A2%D0%B0%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%80%D0%B0" target="_blank">
+                        <img src="https://www.computerhope.com/issues/pictures/ibm-model-f.png" alt="Image 1">
+                    </a>
+                    <p class="image-text">Една од првите тастатури наменета за компутер</p>
+                </div>
+                <div class="image-item">
+                    <a href="https://platinavrata.mk/en/product/ms-elite-c505-gaming-tastatura-membranska-zhichana-1-god/" target="_blank">
+                        <img src="https://switchandclick.com/wp-content/uploads/2021/01/membrane3-1024x576.png" alt="Image 2">
+                    </a>
+                    <p class="image-text">Mембранска тастатура</p>
+                </div>
+                <div class="image-item">
+                    <a href="https://www.anhoch.com/categories/gaming-tastaturi/products?brand=&attribute=&toPrice=274980&inStockOnly=2&sort=latest&perPage=20&page=1" target="_blank">
+                        <img src="https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2024/06/rk-red-switches-in-rk61-keyboard.jpg" alt="Image 3">
+                    </a>
+                    <p class="image-text">Switches во механичка тастатура</p>
+                </div>
+            </div>
+            
+            
+        </section>
+
+        <section id="mouse">
+            <h2>Глувче</h2>
+            <p> <b>Глувчето</b> е примарен уред за навигација кој овозможува движење на курсорот и кликнување на екранот. За разлика од првото <b>дрвено механичко глувче (1964)</b> денес имаме модерни <b>оптички и ласерски модели</b>. Денес, глувчињата можат да бидат <b>жични (USB) или безжични (Bluetooth, RF)</b>, а некои модели поддржуваат <b>прилагодлив DPI (точки по инч) за поголема прецизност</b>. Гејмерските глувчиња имаат <b>повеќе програмски копчиња, RGB осветлување и висока стапка на освежување (1000Hz polling rate)</b> за побрзи реакции во игри. Изгледот на самото глувче е исто така важен фактор бидејќи подолгото користење на глувчето може да предизвика замор и затоа изгледот игра клучна улога и е напревен со цел да полесно да одговара на димензиите на дланката.  
+            </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Computer_mouse#History" target="_blank">
+                    <img src="https://api.time.com/wp-content/uploads/2015/04/mouse.jpeg" alt="Image 1">
+                    <p class="image-text">Првиот глушец за компјутер<p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Optical_mouse" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Microsoft-wireless-mouse.jpg" alt="Image 2">
+                    <p class="image-text">Оптичко глувче</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Optical_mouse#Laser_mice" target="_blank">
+                    <img src="https://www.digitaltrends.com/wp-content/uploads/2016/08/Logitech-G403-Prodigy-mouse-top2.jpg?p=1" alt="Image 3">
+                    <p class="image-text">Ласерско глувче</p></a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="monitor">
+            <h2>Монитор</h2>
+            <p> <b>Мониторот</b> е излезен уред кој го прикажува видеосигналот од компјутерот. Првите монитори или <b>CRT монитори</b> користеле катодни цевки за да го прикажат видео сигналот од компјутерот, но денес модерните <b>LCD, LED и OLED дисплеи</b> имаат подобра резолуцијата, брзината и квалитетот на сликата. Денешните монитори поддржуваат <b>Full HD (1080p), 2K, 4K, па дури и 8K</b> резолуции. Гејмерските монитори се фокусираат на <b>144Hz или 240Hz стапка на освежување(refresh rate)</b>, и во некои случаи има и поголеми кои се значително поскапи и <b>низок response time (1ms)</b>. IPS панелите нудат подобри бои и агли на гледање, додека VA и OLED дисплеите имаат подобар контраст. Некои модели имаат <b>G-Sync и FreeSync</b> за елиминирање на т.н. "screen tearing" ефект во игрите. Современите монитори често имаат <b>USB-C и Thunderbolt порти</b>, што овозможува едноставно поврзување со лаптопи и други уреди.  
+            </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Cathode-ray_tube" target="_blank">
+                    <img src="https://images.javatpoint.com/computer/images/what-is-crt1.png" alt="Image 1">
+                    <p class="image-text">CRT Монитор</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/LCD" target="_blank">
+                    <img src="https://setec.mk/image/cache/catalog/Product/58300_0-1000x1000.jpg" alt="Image 2">
+                    <p class="image-text">LCD Монитор</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://mk.wikipedia.org/wiki/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D1%81%D0%BA%D0%B0_%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D0%B5%D1%87%D0%BA%D0%B0_%D0%B4%D0%B8%D0%BE%D0%B4%D0%B0" target="_blank">
+                    <img src="https://images.samsung.com/is/image/samsung/p6pim/ae/ls27dg602smxue/gallery/ae-odyssey-oled-g6-g60sd-ls27dg602smxue-541504440?$684_547_PNG$" alt="Image 3">
+                    <p class="image-text">OLED Монитор</p></a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="speakers">
+            <h2>Звучници</h2>
+            <p><b>Звучниците</b> играат важна улога во аудио уредувањето, без разлика дали се користат за <b>музика, филмови, гејминг или професионално аудио уредување</b>. Првите компјутерски звучници биле мали и со слаб квалитет, но денешните решенија нудат <b>2.1, 5.1 и 7.1 surround системи</b> за многу подобар звук. Гејмерските звучници често поддржуваат <b>3D аудио ефекти и виртуелен surround звук</b>, што го подобрува искуството во игрите. Безжичните <b>Bluetooth звучници</b> нудат повеќе флексибилност, додека <b>soundbars</b> се популарни за домашно кино. Професионалците користат <b>Hi-Fi звучници</b> со <b>прецизни аудио фреквенции</b>, а модерните модели имаат и <b>equalizer подесувања и бас засилувачи</b> за прилагодлив звук.  </p>
+            <div class="image-container">
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Computer_speakers" target="_blank">
+                    <img src="https://i.redd.it/995vkxz77os71.jpg" alt="Image 1">
+                    <p class="image-text">Еден од првите компјутерски звучници</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Surround_sound" target="_blank">
+                    <img src="https://www.quietpc.com/images/products/logitech-z506-large.jpg" alt="Image 2">
+                    <p class="image-text">5.1 Surround Sound</p></a>
+                </div>
+                <div class="image-item">
+                    <a href="https://en.wikipedia.org/wiki/Soundbar" target="_blank">
+                    <img src="https://www.harmanaudio.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwaa7c5b9e/JBL_Bar5.1Surround_Hero.png?sw=300&sh=300" alt="Image 3">
+                    <p class="image-text">Soundbar</p></a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="camera">
+            <h2>Камера и микрофон</h2>
+            <p><b>Камерите и микрофоните</b> се клучни за <b>видео повици, снимање, стриминг и онлајн комуникација<b>. Првите веб-камери имале <b>ниска резолуција (240p-360p)</b>, но денешните модели поддржуваат <b>1080p, 4K HDR и автофокус</b>. Камерите кои ги користат стримерите често имаат <b>висока стапка на освежување (60fps-120fps)</b> за потечно видео. Професионалците користат <b>DSLR или mirrorless камери</b> како веб-камери со повисок квалитет.  
+                <br>
+                <br>
+                <b>Микрофоните</b>, кои може да се <b>вградени во лаптопи или надворешни USB/XLR модели</b>, значително се подобрени во однос на првите микрофони. <b>Кондензаторските микрофони</b> нудат подобар квалитет на звук за стриминг и подкасти, додека <b>динамичките микрофони</b> се подобри за бучни средини. Современите микрофони поддржуваат <b>AI-базирано потиснување на шумот</b>, што е одлично за конференциски снимања. Безжичните микрофони стануваат сè попопуларни за мобилно користење, а многу професионални решенија имаат <b>омни- или кардиоидни насочени капсули</b> за подобро прифаќање на звукот.</p>
+                <div class="image-container">
+                    <div class="image-item">
+                        <a href="https://mk.wikipedia.org/wiki/%D0%9C%D1%80%D0%B5%D0%B6%D0%BD%D0%B0_%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0" target="_blank">
+                        <img src="https://www.arducam.com/wp-content/uploads/2021/02/B0294-arducam-webcam-microphone-whole.jpg" alt="Image 1">
+                        <p class="image-text">Веб-камера за компјутер</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://en.wikipedia.org/wiki/Digital_single-lens_reflex_camera" target="_blank">
+                        <img src="https://www.adorama.com/alc/wp-content/uploads/2022/01/RodeVideoMicPr.jpg" alt="Image 2">
+                        <p class="image-text">DSLR камера</p></a>
+                    </div>
+                    <div class="image-item">
+                        <a href="https://www.amazon.com/xlr-microphone/s?k=xlr+microphone" target="_blank">
+                        <img src="https://r2.gear4music.com/media/90/901768/600/preview_1.jpg" alt="Image 3">
+                        <p class="image-text">XLR микрофон</p></a>
+                    </div>
+                </div>
+                
+            </section>
+
+       <section id="contact">
+            <h2>Контакт</h2>
+            <p>Павле Ристов IV-3</p>
+            <P>pavleristov3@gmail.com</P>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gimnazijadobridaskalov" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/gimnazijadobridaskalov" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <h3> Проектна задача по информатика 2025 </h3>
+        </footer>
+    </main>
+</body>
+</html>

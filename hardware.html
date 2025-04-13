@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектна задача по информатика</title>
+    <link rel="icon" type="x-icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://r1.ilikewallpaper.net/ipad-wallpapers/download/95123/dark-abstract-black-minimal-4k-ipad-wallpaper-ilikewallpaper_com_2732x2732.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: rgba(240, 240, 240, 0.25);
+            color: #333;
+            backdrop-filter: none;
+            
+        }
+        nav {
+            background-color: black;
+            overflow: hidden;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 0.5rem;
+            border: 10px white;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid white !important;
+            display: inline-block; 
+} 
+    
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+        }
+        nav ul li a.icon {
+            display: inline-block;
+        }
+        .icon {
+    display: inline-block;
+    width: 40px; 
+    height: 50px; 
+    background-color: transparent; 
+    border: 2px solid #333; 
+    transition: transform 0.3s;
+    overflow: hidden; 
+    text-decoration: none;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.icon:hover {
+    transform: scale(1.05); 
+    border-color: #333; 
+}
+
+.icon:active {
+    transform: scale(0.98); 
+}
+.icon:focus {
+    outline: none;
+}
+footer {
+            background-color: #555;
+            color: white;
+            padding: 0.2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+           footer h3{
+      text-align: center;
+      color:white;
+    }
+
+#contact {
+margin-top: 250px;
+font-weight: bold;
+    color: #ffffff;
+}
+#contact p
+{
+font-size: 1rem;
+color: white;
+padding-left: 15px;
+}
+#contact h2{
+padding-left: 15px;
+}
+     .social-icons {
+            display: flex;
+            gap: 10px;
+            padding: 20px; 
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .social-icons img:hover {
+            filter: grayscale(0%);
+        }
+        .gallery-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .tier {
+            margin-bottom: 40px;
+        }
+        .pc-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+        .pc-item {
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .pc-item:hover {
+            transform: scale(1.05);
+            background-color: #292828;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+        }
+        .pc-item p{
+            color: white;
+        }
+        .pc-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            text-align: left;
+        }
+        .pc-item img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        h2{
+            color: white;
+        }
+        @media (max-width: 768px) {
+    .pc-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pc-item {
+        padding: 0 25px;
+    }
+
+    .pc-item img {
+        border-radius: 10px;
+    }
+
+    .pc-item a {
+        text-align: left;
+    }
+
+    p, h2 {
+        padding-left: 10px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #contact {
+        margin-top: 100px;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-icons {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Mobile - up to 480px */
+@media (max-width: 480px) {
+    nav ul li a{
+        font-size: 0.75rem;
+        border-radius: 7.5px;
+        display: inline-block;
+        padding: 10px;
+    }
+        nav ul li {
+            margin: 0 0.5rem;
+            border: 10px white;
+        }
+    .pc-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .pc-item {
+        padding: 0 20px;
+        border-radius: 15px;
+    }
+
+    .pc-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pc-item a {
+        text-align: left;
+    }
+
+    p, h2 {
+        padding-left: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Дома</a></li>
+            <li><a href="hardware.html">Хардвер</a></li>
+            <li><a href="#contact">Контакт</a></li>
+            <li>
+                <a href="https://dobridaskalov.edu.mk" class="icon" target="_blank" rel="noopener noreferrer">
+                  <img src="https://dobridaskalov.edu.mk/wp-content/uploads/2023/11/logo.png" alt="Icon" />
+                </a>
+              </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gallery-container">
+            <div class="tier">
+                <h2>Ниска Класа (Low-End PCs)</h2>
+                <div class="pc-gallery">
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-lite-gaming-ryzen-5-36008gb256gbrx-6400-1435"
+                         target="_blank"><img src="https://www.anhoch.com/storage/media/mx13.jpg" alt="PC 1"><p><br>Desktop PC Lite Gaming</br><br>CPU: AMD Ryzen 5 3600 Six-Core 3.6GHz</br> <br>GPU: Radeon RX 6400 4GB</br> <br>РАМ: 8GB DDR4</br> <br>SSD: 256 GB SATA 3</br></p></a></div>
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-optimal-n41208gb240gb-ssduhd-600-2285" target="_blank"><img src="https://www.anhoch.com/storage/media/pcc12.jpg" alt="PC 2"><p><br>Desktop PC Optimal</br> <br>CPU: Built in with an Intel® Quad-Core Celeron® N4120</br> <br>GPU: Intel UHD Graphics 600</br> <br>РАМ: 8GB DDR4 SO-DIMM</br> <br>SSD: 240GB SATA 3</br></p></a></div>
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-corporate-i3101008gb480gb-ssduhd-630-7367" target="_blank"><img src="https://www.anhoch.com/storage/media/nxl2_1.jpg" alt="PC 3"><p><br>Desktop PC Corporate </br> <br>CPU: Intel Core i3-10100 Comet Lake Quad 3.6GHz</br> <br>GPU: Intel UHD Graphics 630</br> <br>РАМ:  8GB DDR4</br> <br>SSD: 480GB</br></p></a></div>
+                </div>
+            </div>
+            
+            <div class="tier">
+                <h2>Буџет (Budget)</h2>
+                <div class="pc-gallery">
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-acer-nitro-n50640-i512400f16gb1tb-ssdgtx1660-6gbwireless-kb-plus-mousedos-1153" target="_blank"><img src="https://www.anhoch.com/storage/media/nitro-50_n50-640.jpg" alt="PC 4"><p><br>Desktop PC Acer Nitro</br> <br>CPU: Intel® i5-12400F Hexa-core (6 Core™) 2.50 GHz</br> <br>GPU:  NVIDIA® GeForce® GTX™ 1660 6 GB</br> <br>РАМ:  16 GB DDR4 SDRAM</br> <br>SSD: 1 TB Solid State Drive </br></p></a></div>
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-atom-gaming-i314100f16gb500-gb-nvme-ssdrtx-4060-8gb-7369" target="_blank"><img src="https://www.anhoch.com/storage/media/rcc360whapm3g1.jpg" alt="PC 5"><p><br>Desktop PC Atom Gaming</br> <br>CPU:  Intel Core i3-14100F Quad-Core 3.5GHz</br> <br>GPU:  Nvidia RTX 4060 8GB GDDR6</br> <br>РАМ:  16GB DDR4 3200MHz</br> <br>SSD: M.2 Kingston NV3 NVMe 500GB PCIe 4.0  </br></p></a></div>
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-red-force-gaming-ryzen-5-7500f32gb-ddr51tb-nvme-ssdrtx-4060-8gb-7530" target="_blank"><img src="https://www.anhoch.com/storage/media/rcc360whapm3g1.jpg" alt="PC 6"><p><br>Desktop PC Red Force Gaming</br> <br>CPU:   AMD Ryzen 5 7500F 6-Core 3.7GHz</br> <br>GPU: GeForce RTX 4060 8GB</br> <br>РАМ:  32GB DDR5 Kingston Fury 5200MHz</br> <br>SSD:  1TB M.2 NVMe Kingston NV3</br></p></a></div>
+                </div>
+            </div>
+            
+            <div class="tier">
+                <h2>Средна до висока класа (Mid-Range до High-End PCs)</h2>
+                <div class="pc-gallery">
+                    <div class="pc-item"><a href="https://setec.mk/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%B8/asus-gaming-pc-g35dx-wb7730w-win-1152738?mfp=114-%5BGAMING%5D" target="_blank"><img src="https://setec.mk/image/cache/catalog/Product/52738_0-600x600.jpg" alt="PC 7"><p><br>ASUS GAMING PC G35DX</br> <br>CPU:AMD Ryzen™ 7-5800X</br> <br>GPU: NVIDIA® GeForce® RTX 3070 8GB</br> <br>РАМ: 32GB (2x16GB) DDR4 3200MHz</br> <br>SSD: 1TB 7200RPM + 512GB M.2 SSD PCIE NVME</br></p></a></div>
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-gigabyte-gaming-ryzen-5-9600x32gb-ddr5samsung-1tb-nvme-ssd-srtx-4060-ti-8gb-7306" target="_blank"><img src="https://www.anhoch.com/storage/media/gigabyteinteli514600kf1.jpg" alt="PC 8"><p><br>Desktop PC GIGABYTE </br> <br>CPU:AMD Ryzen™ 7-5800X</br> <br>GPU: Gigabyte GeForce RTX 4060 Ti</br> <br>РАМ: 32GB DDR5 EXPO 6400MHz (2x16)</br> <br>SSD: Samsung NVMe 990 PRO 1TB PCIe 4.0</br></p></a></div>
+                    <div class="pc-item"><a href="https://setec.mk/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%B8?product_id=60935" target="_blank"><img src="https://setec.mk/image/cache/catalog/Product/60935_0-600x600.jpg" alt="PC 9"><p><br>RED DRAGON POWERED BY ASUS</br> <br>CPU: Intel i7-14700KF LGA1700 33MB Cache 5.6GHz</br> <br>GPU: ASUS TUF-RTX4070-O12G-GAMING</br> <br>РАМ: Kingston 32GB 5600MHz DDR5 CL40 DIMM</br> <br>SSD: SAMSUNG 2TB SSD 990 PRO</br></p></a></div>
+                </div>
+            </div>
+            
+            <div class="tier">
+                <h2>Екстремно висока класа (Extreme Tier)</h2>
+                <div class="pc-gallery">
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-liquid-gaming-v2-ryzen-7-9800x3d32gb2tb-m2-nvmertx-5070-ti-7537" target="_blank"><img src="https://www.anhoch.com/storage/media/cch61fwr1_1.jpg" alt="PC 10"><p><br>Desktop PC Liquid Gaming v2</br> <br>CPU: AMD Ryzen 7 9800X3D 8-Core 4.7 GHz</br> <br>GPU: MSI GeForce RTX 5070 Ti</br> <br>РАМ: 32GB DDR5 5600MHz</br> <br>SSD: 2TB Samsung NVMe 990 PRO</br></p></a></div>
+                    <div class="pc-item"><a href="https://setec.mk/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%B8?product_id=59717&mfp=114-%5BGAMING%5D" target="_blank"><img src="https://setec.mk/image/cache/catalog/Product/59717_0-600x600.jpg" alt="PC 11"><p><br>ASUS ROG STRIX GAMING PC G16</br> <br>CPU:  Intel® Core™ i9-14900KF</br> <br>GPU: NVIDIA® GeForce® RTX4070S 12GB</br> <br>РАМ: 64GB DDR5</br> <br>SSD: 2TB M.2 SSD PCIE NVME</br></p></a></div>
+                    <div class="pc-item"><a href="https://www.anhoch.com/products/desktop-pc-extreme-gaming-ryzen-7-9800x3d64gb2tb-m2-nvmertx-5080-16gb-gddr7-7631" target="_blank"><img src="https://www.anhoch.com/storage/media/cch61fbr1_3.jpg" alt="PC 12"><p><br>GIGABYTE Gaming PC</br> <br>CPU:  AMD Ryzen 7 9800X3D 8-Core 4.7 GHz</br> <br>GPU: MSI GeForce RTX 5080 GAMING TRIO 16GB GDDR7</br> <br>РАМ: 64GB DDR5 5600MHz Kingston</br> <br>SSD: 2TB Samsung NVMe 990 PRO</br></p></a></div>
+                </div>
+            </div>
+            
+            <div class="tier">
+                <h2>Лаптопи</h2>
+                <div class="pc-gallery">
+                    <div class="pc-item"><a href="https://setec.mk/%D0%BF%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D0%BD%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%98%D1%83%D1%82%D0%B5%D1%80%D0%B8-%D0%B8-%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%B8/%D0%BF%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D0%BD%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%98%D1%83%D1%82%D0%B5%D1%80%D0%B8/asus-b1502cba-ui51c0-star-black-us-mil-std-810h-military-grade-standard56727" target="_blank"><img src="https://setec.mk/image/cache/catalog/Product/56727_0-600x600.jpg" alt="PC 13"><p><br>Лаптоп ASUS B1502CBA</br> <br>CPU:   Intel Core i5-1235U</br> <br>GPU: Intel UHD Graphics</br> <br>РАМ: 8GB DDR4</br> <br>SSD: 512GB M.2 SSD PCIE NVME</br></p></a></div>
+                    <div class="pc-item"><a href="https://setec.mk/%D0%BF%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D0%BD%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%98%D1%83%D1%82%D0%B5%D1%80%D0%B8-%D0%B8-%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%B8/%D0%BF%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D0%BD%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%98%D1%83%D1%82%D0%B5%D1%80%D0%B8/asus-zenbook-14-um3402yar-kp521w-win-1156056" target="_blank"><img src="https://setec.mk/image/cache/catalog/Product/56056_0-600x600.jpg" alt="PC 14"><p><br>Лаптоп ASUS ZenBook 14</br> <br>CPU:   AMD Ryzen 5 7530U</br> <br>GPU: AMD Radeon Integrated Graphics </br> <br>РАМ: 16GB LPDDR4</br> <br>SSD: 1TB M.2 SSD NVME</br></p></a></div>
+                    <div class="pc-item"><a href="https://setec.mk/%D0%BF%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D0%BD%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%98%D1%83%D1%82%D0%B5%D1%80%D0%B8-%D0%B8-%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%B8/%D0%BF%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D0%BD%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%98%D1%83%D1%82%D0%B5%D1%80%D0%B8/asus-rog-zephyrus-g16-gu605mu-qr070w-win-11-home-57399" target="_blank"><img src="https://setec.mk/image/cache/catalog/Product/57399_0-600x600.jpg" alt="PC 15"><p><br>Лаптоп ASUS ROG Zephyrus G16</br> <br>CPU:    Intel® Core™ Ultra 7 Processor 155H</br> <br>GPU: NVIDIA® GeForce RTX4050 6GB GDDR6</br> <br>РАМ: 16GB 4800MHz DDR5</br> <br>SSD: 1TB M.2 SSD NVME</br></p></a></div>
+                </div>
+            </div>
+        </div>
+    <section id="contact">
+        <h2>Контакт</h2>
+        <p>Павле Ристов IV-3</p>
+        <P>pavleristov3@gmail.com</P>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gimnazijadobridaskalov" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/gimnazijadobridaskalov" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h3> Проектна задача по информатика 2025 </h3>
+    </footer>
+</main>
+</body>
+</html>
